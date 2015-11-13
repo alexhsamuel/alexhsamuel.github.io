@@ -3,3 +3,14 @@
 body {
     font-family: Roboto;
 }
+
+.layout div.left {
+    border: 1px solid black;
+    display: inline-block;
+    width: 128px;
+}
+
+.layout div.right {
+    border: 1px solid green;
+    display: inline-block;
+}
