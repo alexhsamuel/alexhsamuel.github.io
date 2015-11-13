@@ -11,7 +11,7 @@
  <body>
   <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
-  <img style="width: 384px; border: 1px solid green;" class="pull-right" src="img/alex.png">
+  <img style="width: 256px; border: 1px solid gray;" class="pull-right" src="img/alex.png">
   <div class="container-fluid">
 
    <div class="page-header">
@@ -41,14 +41,12 @@
     </p>
    </div>
 
-   <div class="row">
-    <div class="col-xs-2">
-     <h2>
-      <span class="glyphicon glyphicon-usd" aria-hidden="true"></span>
-      Values
-     </h2>
-    </div>
-    <div class="col-xs-6">
+   <div class="layout">
+    <h2 class="left">
+     <span class="glyphicon glyphicon-usd" aria-hidden="true"></span>
+     Values
+    </h2>
+    <div class="right">
      <ul>
       <li>
        As an engineer, I serve specific needs of specific people with
@@ -70,16 +68,12 @@
       </li>
      </ul>
     </div>
-   </div>
 
-   <div class="row">
-    <div class="col-xs-2">
-     <h2>
-      <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-      Tech
-     </h2>
-    </div>
-    <div class="col-xs-10">
+    <h2 class="left">
+     <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+     Tech
+    </h2>
+    <div class="right">
      <ul>
       <li>
        I've done a lot of stuff: compilers, databases, concurrency, data
@@ -100,16 +94,12 @@
       </li>
      </ul>
     </div>
-   </div>
 
-   <div class="row">
-    <div class="col-xs-2">
-     <h2>
-      <span class="glyphicon glyphicon-stats" aria-hidden="true"></span>
-      Quant
-     </h2>
-    </div>
-    <div class="col-xs-10">
+    <h2 class="left">
+     <span class="glyphicon glyphicon-stats" aria-hidden="true"></span>
+     Quant
+    </h2>
+    <div class="right">
      <ul>
       <li>
        I've implemented  models in physics, biology, and finance,
@@ -131,25 +121,17 @@
       </li>
      </ul>
     </div>
-   </div>
 
-   <div class="row">
-    <div class="col-xs-2">
-     <h2>
-      <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
-      Experience
-     </h2>
-    </div>
-    <div class="col-xs-10">
-    </div>
-   </div>
+    <h2 class="left">
+     <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
+     Experience
+    </h2>
 
-   <div class="row">
-    <div class="col-xs-2">
+    <div class="left">
      <div>GETCO</div>
      <div>Nov 2011&ndash;Feb 2013</div>
     </div>
-    <div class="col-xs-10">
+    <div class="right">
      <div>
       Quantitative Developer, U.S. Options Market Making
      </div>
@@ -164,11 +146,13 @@
       processes to shift the group from liquidity provision to stat arb and MFT.
      </p>
     </div>
-   </div>
 
-     <div>
-      Quantitative Developer, Equity Options Group (Vice President) 10/2007&ndash;8/2011 D. E. Shaw & Co
-     </div>
+    <div class="left">
+     <div>D.E. Shaw &amp; Co.</div>
+     <div>Oct 2007&ndash;Aug 2011</div>
+    </div>
+    <div class="right">
+     Quantitative Developer, Equity Options Group (Vice President) 
      <p>
       I led the Options group's technology effort.
      </p>
@@ -195,18 +179,25 @@
        environment.  Provided Python training to developers and quants.
       </li>
      </ul>
+    </div>
 
-     <div>
-      Consultant 7/2007-8/2007 Lab49, Inc.
-     </div>
+    <div class="left">
+     <div>Lab49 Inc.</div>
+     <div>Jul 2007&ndash;Aug 2007</div>
+    </div>
+    <div class="right">
      <p>
       Client engagement at Deutsche Bank to extended CDO analytic and pricing application.
      </p>
+    </div>
 
-     <div>
-      Quantitative Developer, Institutional Asset Management Group 7/2005&ndash;5/2007 D. E. Shaw & Co
-     </div>
+    <div class="left">
+     <div>D. E. Shaw &amp; Co</div>
+     <div>7/2005&ndash;5/2007</div>
+    </div>
+    <div class="right">
      <p>
+      Institutional Asset Management Group
       Developer in new group providing bespoke equity investment products to institutional clients.
      </p>
      <ul>
@@ -223,10 +214,14 @@
        monitored account configuration in automated trading systems.
       </li>
      </ul>
+    </div>
 
-     <div>
-      Founder and Software Engineering Consultant 2/1998&ndash;10/2001 CodeSourcery, LLC
-     </div>
+    <div class="left">
+     <div>CodeSourcery LLC</div>
+     <div>Feb 1998 - Oct 2001</div>
+    </div>
+    <div class="right">
+     Co-founder
      <p>
       CodeSourcery, LLC is a directed engineering consultancy and software vendor
       specializing in compilers and other development tools on Linux and other
@@ -237,11 +232,16 @@
       graphical user interface software.  I contributed significantly to GCC and
       several commercial compilers.
      </p>
+    </div>
 
+    <div class="left">
      <div>
-      Graduate Research Assistant 9/1996&ndash;12/1999, 10/2001&ndash;6/2005 Caltech group, 
       <a href="http://www.slac.stanford.edu/BFROOT/">BABAR Collaboration</a>
      </div>
+     <div>Sep 1996&ndash;Dec 1999, Oct 2001&ndash;Jun 2005</div>
+    </div>
+    <div class="right">
+     Graduate Research Assistant
      <p>
       I researched rare decays of B meson, primarily using custom-written
       software.  Software projects included high-rate multi-node data collection
@@ -251,18 +251,23 @@
       Python-based framework for analysis and presentation of statistical
       distributions in high energy physics data sets.
      </p>
+    </div>
 
-     <div>
-      Software Developer 9/1995&ndash;7/1996 BBN Systems & Technologies
-     </div>
+    <div class="left">
+     <div>BBN Systems & Technologies</div>
+     <div>Sep 1995&ndash;Jul 1996</div>
+    </div>
+    <div class="right">
+     Software Developer 
      <p>
       I worked on Prophet, a data analysis system for statistical and genetic
       sequence analysis module.
      </p>
-
+    </div>
 
    </div>
 
+   <div style="clear: left;"></div>
 
    <h2>
     <span class="glyphicon glyphicon-apple" aria-hidden="true"></span>
