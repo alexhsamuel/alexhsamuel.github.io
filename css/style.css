@@ -9,6 +9,10 @@ body {
     margin-top: 48px;
 }
 
+.layout .head {
+    padding-bottom: 20px;
+}
+
 .layout .left {
     position: relative;
     float: left;
@@ -67,3 +71,24 @@ a:hover
     color: black;
 }
 
+/*----------------------------------------------------------------------------*/
+
+@media print {
+
+@page {
+    margin: 0.5in 1.5in;
+}
+
+body {
+    zoom: 62%;
+}
+
+.noprint {
+    display: none;
+}
+
+a[href]:after {
+    content: none;
+}
+
+}
