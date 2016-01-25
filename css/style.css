@@ -81,6 +81,17 @@ a:hover
     color: black;
 }
 
+.printonly {
+    display: none;
+}
+
+.note {
+    font-size: 60%;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    margin-bottom: 60px;
+}
+
 /*----------------------------------------------------------------------------*/
 
 @media only screen and (max-width: 600px) {
@@ -142,6 +153,14 @@ body {
 
 a[href]:after {
     content: none;
+}
+
+.printonly {
+    display: initial;
+}
+
+.pagebreak {
+    page-break-after: always;
 }
 
 }
