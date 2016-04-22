@@ -27,3 +27,19 @@ The expression grammar is as follows:
 
 The output is a single date, or an offset, or a sequence of dates, one per line.
 
+
+# 2. Note Service
+
+A REST service for short text notes, with user authentication.
+
+A note has a (UTF-8) title, (UTF-8) text, an an internal ID assigned by the API.
+
+Endpoints:
+
+- `POST /oauth/token` - performs OAUTH2 auth, returns an access token for other endpoints
+- `POST /notes` - creates a new note
+- `GET /notes/ID` - retrieves a note
+- `PUT /notes/ID` - replaces an existing note
+- `GET /notes` - returns a list of all note IDs and titles
+- `GET /notes?s=TERM` - returns a list of all note IDs and titles matching TERM
+
