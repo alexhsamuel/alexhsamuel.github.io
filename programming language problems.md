@@ -43,3 +43,4 @@ Endpoints:
 - `GET /notes` - returns a list of all note IDs and titles
 - `GET /notes?s=TERM` - returns a list of all note IDs and titles matching TERM
 
+The service is backed by a persistent database of some sort. User account credentials are retrieved from the database.
