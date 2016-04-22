@@ -36,11 +36,11 @@ A note has a (UTF-8) title, (UTF-8) text, an an internal ID assigned by the API.
 
 Endpoints:
 
-- `POST /oauth/token` - performs OAUTH2 auth, returns an access token for other endpoints
+- `POST /oauth/token` - performs OAUTH2, returns an access token for other endpoints
 - `POST /notes` - creates a new note
 - `GET /notes/ID` - retrieves a note
 - `PUT /notes/ID` - replaces an existing note
 - `GET /notes` - returns a list of all note IDs and titles
 - `GET /notes?s=TERM` - returns a list of all note IDs and titles matching TERM
 
-The service is backed by a persistent database of some sort. User account credentials are retrieved from the database.
+The service is backed by a persistent database of some sort. Account credentials are retrieved from the database.
