@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+<style>
+body {
+  margin: 2ex 20%;
+}
+.eq {
+  margin-left: 20%;
+  margin-right: 2em;
+}
+</style>
+</head>
+
+<body>
+<h1>
+  Tater Tot Optimality
+</h1>
+<p>
+  Consider an ideal cylindrical tater tot of height `h` and radius `r`.  The
+  volume is given by,
+</p>
+<p class="eq">
+  `V = \pi r^2 h`,
+</p>
+<p>
+  while the surface area, consisting of two discs at the ends as well as a 
+  rolled up side rectangle, is given by,
+</p>
+<p class="eq">
+  `A = 2 (\pi r^2) + 2 \pi r h = 2 \pi r (r + h)`.
+</p>
+<p>
+  A tater tot is esteemed for its crispiness, which arises at the surface 
+  but not in the interior its body.  We seek, therefore, to optimize the surface
+  area for a tater tot of fixed volume `V`.  In terms of this fixed parameter,
+  we may reduce the number of free parameters to one,
+</p>
+<p class="eq">
+  `h = V / (\pi r^2)`,
+</p>
+<p>
+  in terms of which,
+</p>
+<p class="eq">
+  `A = 2 \pi r^2 + 2 \pi r V / (\pi r^2)
+     = 2 \pi r^2 + 2 V / r`.
+</p>
+<p>
+  We now look for an extremal value by setting the derivative to zero,
+</p>
+<p class="eq">
+  `(dA)/(dr) = 4\pi r - 2 V / r^2 = 0` <br>
+  `4\pi r = 2 V / r^2` <br>
+  `r^3 = V / (2\pi)` <br>
+  `r = (V / (2\pi))^(1/3)`.
+</p>
+<p>
+  In terms of the original parameters,
+</p>
+<p class="eq">
+  `r = ((\pi r^2 h) / (2\pi)) ^ (1/3)` <br>
+  `r^3 = (r^2 h) / 2` <br>
+  `r = h / 2`
+</p>
+<p>
+  In this configuration, the height of the tater tot is equal to its diameter.
+</p>
+<p>
+  To determine if this is a minimum or a maximum, we compute the second
+  derivative at this parameter value,
+<p>
+<p class="eq">
+  `(d^2A)/(dr^2) = 4\pi + 4 V / r^3
+                 = 4\pi + 4 V ((2\pi) / V)
+                 = 12\pi > 0`
+</p>
+<p>
+  This is therefore a relative minimum.  At this point, the tatar tot of fixed
+  volume `V` has proportions `h=2r` and achieves a pessimal surface
+  area,
+</p>
+<p class="eq">
+  `A = 2\pi h/2 (h/2 + h) = 3/2\pi h^2 = 6\pi r^2 = root 3 (54 \pi V^2)`.
+</p>
+<p>
+  A 1 cubic cm tater tot will have a minimum surface area of approximately 5.5
+  square cm.
+</p>
+<p>
+  As the tater tot is either flattened out to a shorter height, or extruded
+  to a much longer height, the area can be made arbitrary large at fixed volume.
+  In fact,
+</p>
+<p class="eq">
+  `A = 2\pi r^2 + 2 V/r = 2 V (1/r + 1/h)`,
+</p>
+<p>
+  and since either `r` or `h` can be made arbitrary small without changing
+  `V`, the area may be extended as much as desired.
+</p>
+</body>
+</html>
