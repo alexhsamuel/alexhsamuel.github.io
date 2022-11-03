@@ -3,8 +3,14 @@ body {
 }
 
 img.me {
-    width: 256px;
-    margin-top: 16px;
+    width: 200px;
+    height: 200px;
+    margin-right: 16px;
+}
+
+.headline {
+    display: flex;
+    flex-direction: row;
 }
 
 .layout .layout-row {
@@ -146,6 +152,8 @@ img.me {
 
 body {
     zoom: 72%;
+    -moz-transform: scale(0.72);
+    transform: scale(0.72);
 }
 
 .noprint {
