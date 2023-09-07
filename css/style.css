@@ -3,8 +3,10 @@ body {
 }
 
 img.me {
-    width: 200px;
-    height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+    flex-shrink: 0;
+    aspect-ratio: 1;
     margin-right: 16px;
 }
 
@@ -120,7 +122,8 @@ h1 {
 }
 
 img.me {
-    width: 160px;
+    max-width: 160px;
+    max-height: 160px;
     margin-top: 16px;
 }
 
