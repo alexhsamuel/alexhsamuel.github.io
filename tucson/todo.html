@@ -19,242 +19,274 @@
         font-family: Monospace, "sans serif";
         font-size: 13pt;
       }
+
+      img {
+        max-width: 100%;
+      }
+
+      #layout {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 6fr;
+      }
+
+      #content > div {
+        display: none;
+      }
     </style>
+
+    <script>
+      let sec = null
+
+      function show(id) {
+        if (sec)
+          sec.style.display = null
+        sec = document.getElementById(id)
+        sec.style.display = 'block'
+      }
+    </script>
   </head>
   <body>
     <h1>(Tucson according to Alex)</h1>
 
-    <ul>
-      <li>
-        <h3>Caves</h3>
-        <p>
-          The geological excitement continues underground.  Big nearby sites
-          include <a href="https://en.wikipedia.org/wiki/Kartchner_Caverns_State_Park">Kartchner
-          Caverns State Park</a>
-          and <a href="https://en.wikipedia.org/wiki/Colossal_Cave_(Arizona)">Colossal
-          Cave</a>.
-        </p>
-        <p class="alex-says">
-          I love caves but haven't been to these yet.
-        </p>
-      </li>
+    <div id="layout">
+      <div id="menu">
+        <ul>
+          <li><a href="javascript:show('air-and-space-museum')">Air&amp;Space</a></li>
+          <!-- <li><a href="javascript:show('archery')">Archery</a></li> -->
+          <li><a href="javascript:show('biospehere-2')">Biosphere</a></li>
+          <li><a href="javascript:show('country-western')">Boot Scootin</a></li>
+          <li><a href="javascript:show('desert')">Cacti</a></li>
+          <li><a href="javascript:show('caves')">Caves</a></li>
+          <li><a href="javascript:show('desert-museum')">Critters</a></li>
+          <li><a href="javascript:show('dude-ranches')">Cowboys</a></li>
+          <li><a href="javascript:show('airplane-boneyard')">Dead Planes</a></li>
+          <li><a href="javascript:show('gem-show')">Gems</a></li>
+          <li><a href="javascript:show('guns')">Guns</a></li>
+          <li><a href="javascript:show('horses')">Horses</a></li>
+          <li><a href="javascript:show('mining')">Mining</a></li>
+          <li><a href="javascript:show('nogales')">Mexico</a></li>
+          <li><a href="javascript:show('quirky')">Quirky</a></li>
+          <li><a href="javascript:show('rocks')">Rocks</a></li>
+          <li><a href="javascript:show('rodeo')">Rodeo</a></li>
+          <li><a href="javascript:show('kitt-peak')">Stars</a></li>
+          <li><a href="javascript:show('forest')">Trees</a></li>
+          <li><a href="javascript:show('titan-missle-museum')">Missles</a></li>
+          <li><a href="javascript:show('tombstone')">Tombstone</a></li>
+          <li><a href="javascript:show('valley-of-the-moon')">Valley of the Moon</a></li>
+        </ul>
+      </div>
+      <div id="content">
+        <div id="caves">
+          <h3>Caves</h3>
+          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/0f/0b/0e/kartchner-caverns-in.jpg?w=1200&h=1200&s=1">
+          <p>
+            The geological excitement continues underground.  Big nearby sites
+            include <a href="https://en.wikipedia.org/wiki/Kartchner_Caverns_State_Park">Kartchner
+            Caverns State Park</a>
+            and <a href="https://en.wikipedia.org/wiki/Colossal_Cave_(Arizona)">Colossal
+            Cave</a>.
+          </p>
+          <p class="alex-says">
+            I love caves but haven't been to these yet.
+          </p>
+        </div>
 
-      <li>
-        <h3><a href="https://discovertombstone.com/">Tombstone, AZ</a></h3>
-        <p>
-          A real Wild West mining boom town and site of the "Shootout at the
-          O.K. Corral".  Now exists as a Disneyfied but still fairly amusing
-          characature of itself.
-        </p>
-        <p class="alex-says">
-          It's fun if you are open to some cheesiness.  I haven't seen most of
-          the sights and shows.
-        </p>
-      </li>
+        <div id="tombstone">
+          <h3><a href="https://discovertombstone.com/">Tombstone, AZ</a></h3>
+          <p>
+            A real Wild West mining boom town and site of the "Shootout at the
+            O.K. Corral".  Now exists as a Disneyfied but still fairly amusing
+            characature of itself.
+          </p>
+          <p class="alex-says">
+            It's fun if you are open to some cheesiness.  I haven't seen most of
+            the sights and shows.
+          </p>
+        </div>
 
-      <li>
-        <h3>Bisbee</h3>
-        <p>
-          A real mining town nestled among steep hills; feels a bit like a
-          wilder mini-San Fran.  Saloons, magic shows, and of course gift shops.
-          Huge open-pit mines, some in use until the late 20th century, and mine
-          shaft tours.
-        </p>
-        <p>
-        <p class="alex-says">
-          Definitely cute and more real than Tombstone.
-        </p>
-      </li>
+        <div id="mining">
+          <h3>Mining</h3>
+          <p>
+            A real mining town nestled among steep hills; feels a bit like a
+            wilder mini-San Fran.  Saloons, magic shows, and of course gift shops.
+            Huge open-pit mines, some in use until the late 20th century, and mine
+            shaft tours.
+          </p>
+          <p>
+          <p class="alex-says">
+            Definitely cute and more real than Tombstone.
+          </p>
+        </div>
 
-      <li>
-        <h3><a href="https://www.desertmuseum.org/">Arizona-Sonora Desert
-        Museum</a></h3>
-        <p>
-        </p>
-        <p class="alex-says">
-        </p>
-      </li>
+        <div id="desert-museum">
+          <h3><a href="https://www.desertmuseum.org/">Arizona-Sonora Desert
+          Museum</a></h3>
+          <p>
+          </p>
+          <p class="alex-says">
+          </p>
+        </div>
 
-      <li>
-        <h3>Airplane Boneyard</h3>
-        <p>
-        </p>
-        <p class="alex-says">
-        </p>
-      </li>
+        <div id="airplane-boneyard">
+          <h3>Airplane Boneyard</h3>
+          <p>
+          </p>
+          <p class="alex-says">
+          </p>
+        </div>
 
-      <li>
-        <h3>Pima Air &amp; Space Museum</h3>
-        <p>
-        </p>
-        <p class="alex-says">
-        </p>
-      </li>
+        <div id="air-and-space-museum">
+          <h3>Pima Air &amp; Space Museum</h3>
+          <p>
+          </p>
+          <p class="alex-says">
+          </p>
+        </div>
 
-      <li>
-        <h3>Titan Missle Museum</h3>
-        <p>
-        </p>
-        <p>
-          There are also several other sealed-up Titan missle sites scattered
-          around the area.
-        </p>
-        <p class="alex-says">
-        </p>
-      </li>
+        <div id="titan-missle-museum">
+          <h3>Titan Missle Museum</h3>
+          <p>
+          </p>
+          <p>
+            There are also several other sealed-up Titan missle sites scattered
+            around the area.
+          </p>
+          <p class="alex-says">
+          </p>
+        </div>
 
-      <li>
-        <h3>Valley of the Sun</h3>
-        <p>
-        </p>
-        <p class="alex-says">
-          Never been, even though it's only a short way from home.
-        </p>
-      </li>
+        <div id="valley-of-the-moon">
+          <h3>Valley of the Moon</h3>
+          <p>
+          </p>
+          <p class="alex-says">
+            Never been, even though it's only a short way from home.
+          </p>
+        </div>
 
-      <li>
-        <h3>Kitt Peak</h3>
-        <p>
-        </p>
-        <p class="alex-says">
-          This place is unbelievably cool and completely worth freezing your ass
-          in the cold mountain air.
-        </p>
-      </li>
+        <div id="kitt-peak">
+          <h3>Kitt Peak</h3>
+          <p>
+          </p>
+          <p class="alex-says">
+            This place is unbelievably cool and completely worth freezing your ass
+            in the cold mountain air.
+          </p>
+        </div>
 
-      <li>
-        <h3>Biosphere 2</h3>
-        <p>
-        </p>
-        <p class="alex-says">
-          Haven't been there for many, many years.
-        </p>
-      </li>
+        <div id="biospehere-2">
+          <h3>Biosphere 2</h3>
+          <p>
+          </p>
+          <p class="alex-says">
+            Haven't been there for many, many years.
+          </p>
+        </div>
 
-      <li>
-        <h3>San Xavier del Bac</h3>
-        <p>
-        </p>
-        <p class="alex-says">
-          Kinda cool, but seems shoddy if you've been to the nicer churches in
-          Mexico or Europe.
-        </p>
-      </li>
+        <div id="nogales">
+          <h3>Nogales</h3>
+          <p>
+          </p>
+          <p class="alex-says">
+            Drove through the U.S. side but haven't crossed the border yet.
+          </p>
+        </div>
 
-      <li>
-        <h3>Patagonia</h3>
-        <p>
-        </p>
-        <p class="alex-says">
-        </p>
-      </li>
+        <div id="gem-show">
+          <h3>Tucson Gem Show</h3>
+          <p>
+            Every year, end of January and beginning of February.
+          </p>
+          <p class="alex-says">
+            Haven't been yet!  People say that town is sort of overrun during Gem
+            Show.
+          </p>
+        </div>
 
-      <li>
-        <h3>Nogales</h3>
-        <p>
-        </p>
-        <p class="alex-says">
-          Drove through the U.S. side but haven't crossed the border yet.
-        </p>
-      </li>
+        <div id="rodeo">
+          <h3><a href="https://www.tucsonrodeo.com/">Tucson Rodeo</a></h3>
+          <p>
+            Late February.
+          </p>
+          <p class="alex-says">
+            Haven't been but I wanna.  Yeehaw!
+          </p>
+        </div>
 
-      <li>
-        <h3>Tucson Gem Show</h3>
-        <p>
-          Every year, end of January and beginning of February.
-        </p>
-        <p class="alex-says">
-          Haven't been yet!  People say that town is sort of overrun during Gem
-          Show.
-        </p>
-      </li>
+        <div id="guns">
+          <h3>Guns</h3>
+          <p>
+            Shoot them!  Lots of shooting ranges and shooting-related stuff.  Guns
+            are everywhere in the West.
+          </p>
+          <p class="alex-says">
+            I've never discharged a firearm.  Yet.  Look out.
+          </p>
+        </div>
 
-      <li>
-        <h3><a href="https://www.tucsonrodeo.com/">Tucson Rodeo</a></h3>
-        <p>
-          Late February.
-        </p>
-        <p class="alex-says">
-          Haven't been but I wanna.  Yeehaw!
-        </p>
-      </li>
+        <div id="horses">
+          <h3>Horses</h3>
+          <p>
+            Ride them!
+          </p>
+          <p class="alex-says">
+            Tried it once and they put me on a horse that
+            refused to do anything I wanted.
+          </p>
+        </div>
 
-      <li>
-        <h3>Guns</h3>
-        <p>
-          Shoot them!  Lots of shooting ranges and shooting-related stuff.  Guns
-          are everywhere in the West.
-        </p>
-        <p class="alex-says">
-          I've never discharged a firearm.  Yet.  Look out.
-        </p>
-      </li>
+        <div id="archery">
+          <h3>Archery</h3>
+          <p>
+            Bows and arrows!
+          </p>
+          <p class="alex-says">
+            Never tried.
+          </p>
+        </div>
 
-      <li>
-        <h3>Horses</h3>
-        <p>
-          Ride them!
-        </p>
-        <p class="alex-says">
-          Tried it once and they put me on a horse that
-          refused to do anything I wanted.
-        </p>
-      </li>
+        <div id="dude-ranches">
+          <h3>Dude Ranches</h3>
+          <p>
+            These combine horses, guns, archery, campfire food, and bad coffee in
+            a bundled up, tourist-friendly experience.
+          </p>
+          <p class="alex-says">
+          </p>
+        </div>
 
-      <li>
-        <h3>Archery</h3>
-        <p>
-          Bows and arrows!
-        </p>
-        <p class="alex-says">
-          Never tried.
-        </p>
-      </li>
+        <div id="quirky">
+          <h3>other <a href="https://maps.roadtrippers.com/trips/26992307">quirky stuff</a></h3>
+          <p>
+            Tucson thinks of itself as weird.
+          </p>
+          <p class="alex-says">
+            IMO, Tucson doesn't achieve a California level of weird; I'd put it
+            somewhere around "quirky".  But still fun.
+          </p>
+        </div>
 
-      <li>
-        <h3>Dude Ranches</h3>
-        <p>
-          These combine horses, guns, archery, campfire food, and bad coffee in
-          a bundled up, tourist-friendly experience.
-        </p>
-        <p class="alex-says">
-        </p>
-      </li>
+        <div id="country-western">
+          <h3>Country Music</h3>
+          <img src="https://tucsonfoodie.com/wp-content/uploads/2018/03/TF-the-maverick-620x400.jpg">
+          <p>
+            Country music and country dancing are the thing in Tucson.  Locals
+            may or may not actually be involved in agriculture, but most do
+            drive truck-like vehicles.  The dance floor is roomy and $2 drafts
+            are still a thing.  There's Two Step, there's line dancing, and
+            there's Arizona's own special brand of Country Swing, all going down
+            at the same time.
+          </p>
+          <p>
+            Most notably: <a href="https://www.tucsonmaverick.com/">The Maverick - King of Clubs</a>.
+          </p>
+          <p class="alex-says">
+            
+          </p>
+        </div>
 
-      <li>
-        <h3>other <a href="https://maps.roadtrippers.com/trips/26992307">quirky stuff</a></h3>
-        <p>
-          Tucson thinks of itself as weird.
-        </p>
-        <p class="alex-says">
-          IMO, Tucson doesn't achieve a California level of weird; I'd put it
-          somewhere around "quirky".  But still fun.
-        </p>
-      </li>
-
-      <li>
-        <h3>Boot Scootin'</h3>
-        <p>
-          Country dancing is the thing in Tucson.  Those in attendance may or
-          may not actually be involved in agriculture, but most do drive
-          truck-like vehicles.  Roomy dance floors and the drinks aren't too
-          expensive.  The dancing itself is all over the place.  Two step, line
-          dancing, and Arizona's own special brand of country swing, all going
-          down at the same time.  Most
-          notably: <a href="https://www.tucsonmaverick.com/">The Maverick</a>.
-        </p>
-        <p class="alex-says">
-        </p>
-      </li>
-
-      <li>
-        <h3></h3>
-        <p>
-        </p>
-        <p class="alex-says">
-        </p>
-      </li>
-
-    </ul>
+      </div>
+    </div>
   </body>
 </html>
