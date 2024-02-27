@@ -8,35 +8,91 @@
         src: url(RioGrande.ttf) format("truetype");
       }
 
-      h1 {
-        font-family: "Rio Grande";
-        font-weight: normal;
-        font-size: 400%;
+      @font-face {
+        font-family: "Old Standard TT";
+        font-weight: 400;
+        src: url(OldStandardTT-Regular.ttf) format("truetype");
+      }
+
+      @font-face {
+        font-family: "Rye";
+        font-weight: 400;
+        src: url(Rye-Regular.ttf) format("truetype");
       }
 
       body {
         background: white;
-        font-family: Monospace, "sans serif";
-        font-size: 13pt;
+        font-family: "Old Standard TT";
+        /* font-family: Monospace, "sans serif"; */
+        font-size: 14pt;
+      }
+
+      h1 {
+        font-family: "Rio Grande";
+        font-weight: normal;
+        font-size: 300%;
+        text-align: center;
+      }
+
+      h2 {
+        font-family: "Rye";
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 2em;
+      }
+
+      h3 {
+        font-family: "Rye";
+        font-weight: 400;
       }
 
       img {
-        max-width: 100%;
+        max-width: 600px;
+        max-height: 600px;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      a:visited {
+        color: inherit;
       }
 
       #layout {
         width: 100%;
         display: grid;
-        grid-template-columns: 1fr 6fr;
+        grid-template-columns: 25% 75%;
+      }
+
+      #menu {
+        margin: 0 1em;
+      }
+
+      #menu ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      #menu a {
+        text-decoration: none;
+      }
+
+      #content {
+        margin: 0 2em;
       }
 
       #content > div {
         display: none;
       }
 
+      #content li {
+        margin-bottom: 1em;
+      }
+
       .alex-says {
-          font-size: 90%;
-          font-style: italic;
+        font-size: 90%;
+        font-style: italic;
       }
     </style>
 
@@ -51,33 +107,33 @@
       }
     </script>
   </head>
-  <body>
+  <body style="max-width: 1024px">
     <h1>(Tucson according to Alex)</h1>
-    <h3>Incorporated 1877 &bull; Population 542,629</h3>
+    <h2>Incorporated 1877 &bull; Population 542,629</h2>
 
     <div id="layout">
       <div id="menu">
         <ul>
-          <li><a href="javascript:show('air-and-space-museum')">Air &amp; Space</a></li>
           <li><a href="javascript:show('biospehere-2')">Biosphere 2</a></li>
-          <li><a href="javascript:show('country-western')">Boot Scootin'</a></li>
+          <li><a href="javascript:show('country-western')">Boot Scootin</a></li>
           <li><a href="javascript:show('desert')">Cacti</a></li>
           <li><a href="javascript:show('caves')">Caves</a></li>
-          <li><a href="javascript:show('desert-museum')">Critters</a></li>
           <li><a href="javascript:show('cowboys')">Cowboys</a></li>
+          <li><a href="javascript:show('desert-museum')">Critters</a></li>
           <!-- <li><a href="javascript:show('airplane-boneyard')">Dead Planes</a></li> -->
           <li><a href="javascript:show('gem-show')">Gems</a></li>
           <li><a href="javascript:show('guns')">Guns</a></li>
           <li><a href="javascript:show('horses')">Horses</a></li>
-          <li><a href="javascript:show('mining')">Mining</a></li>
           <li><a href="javascript:show('nogales')">Mexico</a></li>
+          <li><a href="javascript:show('mining')">Mining</a></li>
+          <li><a href="javascript:show('titan-missle-museum')">Missles</a></li>
+          <li><a href="javascript:show('old-tucson-studios')">Old Tucson</a></li>
+          <li><a href="javascript:show('air-and-space-museum')">Planes</a></li>
           <li><a href="javascript:show('quirky')">Quirky</a></li>
           <!--<li><a href="javascript:show('rocks')">Rocks</a></li>-->
           <li><a href="javascript:show('kitt-peak')">Stars</a></li>
-          <li><a href="javascript:show('forest')">Trees</a></li>
-          <li><a href="javascript:show('titan-missle-museum')">Missles</a></li>
-          <li><a href="javascript:show('old-tucson-studios')">Old Tucson</a></li>
           <li><a href="javascript:show('tombstone')">Tombstone</a></li>
+          <li><a href="javascript:show('forest')">Trees</a></li>
           <li><a href="javascript:show('valley-of-the-moon')">Valley of the Moon</a></li>
         </ul>
       </div>
@@ -180,6 +236,7 @@
           <p>
             A former Titan missle silo, now a museum to the Cold War.
           </p>
+          <img src="https://www.oneman-onemap.com/wp-content/uploads/2020/07/20191118_105924_DSC9972.tif.wm-4.jpg">
           <p>
             There are also several other sealed-up Titan missle sites scattered
             around the area.
@@ -201,6 +258,7 @@
         </div>
 
         <div id="kitt-peak">
+          <img src="https://i1.wp.com/spacetourismguide.com/wp-content/uploads/2018/09/Stargazing-in-Tucson-Saguaro-National-Park-Bob-Wick-for-BLM-via-Flickr.jpg?w=862&ssl=1">
           <p>
             The clear air and isolated peaks make the Sonoran Desert great for astronomy and stargazing.
           </p>
@@ -211,7 +269,6 @@
             of all shapes like mushrooms.  You can visit it in the daytime, and
             with prior arrangement, for nighttime viewing tours.
           </p>
-
           <p class="alex-says">
             This place is unbelievably cool and completely worth freezing your ass
             in the cold mountain air.
@@ -324,14 +381,14 @@
 
           <ul>
             <li>
-              <b>Saguaro National Forest West</b> lies just west of downtown,
-              attached to <b>Tucson Mountain Park</b>.  It's a desert gem, with
-              hiking trails of various lengths and difficulties.  <b>Wasson
-              Peak</b>, a 1.5 hour, 650 meter climb, overlooks both Tucson and
-              the park.
+              <b><a href="https://www.nps.gov/sagu/index.htm">Saguaro National
+              Park West</a></b> lies just west of downtown, attached
+              to <b>Tucson Mountain Park</b>.  It's a desert gem, with hiking
+              trails of various lengths and difficulties.  <b>Wasson Peak</b>, a
+              1.5 hour, 650 meter climb, overlooks both Tucson and the park.
             </li>
             <li>
-              <b>Saguaro National Forest East</b> is disjoint but part of the
+              <b>Saguaro National Park East</b> is disjoint but part of the
               same park.  It lies on the far east fringes of town.  Longer
               trails, higher peaks, and less crowd.
             </li>
@@ -343,8 +400,9 @@
               hiking spot.
             </li>
             <li>
-              <b>Catalina State Park</b> on the east side of the Catalina
-              Mountains is particularly known for wildflowers.
+              <b><a href="https://azstateparks.com/catalina">Catalina State
+              Park</a></b> on the east side of the Catalina Mountains is
+              particularly known for wildflowers.
             </li>
             <li>
               The <b><a href="https://www.discovermarana.org/blog/hiking-the-tortolita-mountains/">Tortolita
@@ -352,9 +410,10 @@
               beautiful and lightly used.
             </li>
             <li>
-              <b>Ironwood National Monument</b> is a vast stretch of flat desert
-              and bluffs, an hour to the northwest.  It's lightly developed and
-              great for backcountry hiking.
+              <b><a href="https://ironwoodforest.org/">Ironwood National
+              Monument</a></b> is a vast stretch of flat desert and bluffs, an
+              hour to the northwest.  It's lightly developed and great for
+              backcountry hiking.
             </li>
           </ul>
 
