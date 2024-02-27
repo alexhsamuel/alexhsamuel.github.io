@@ -27,6 +27,7 @@
       }
 
       body {
+        max-width: 1024px;
         background: white;
         font-family: "Old Standard TT";
         font-size: 14pt;
@@ -124,9 +125,13 @@
         sec = document.getElementById(id)
         sec.style.display = 'block'
       }
+
+      function init() {
+        sec = document.getElementById("start")
+      }
     </script>
   </head>
-  <body style="max-width: 1024px">
+  <body onload="init()">
     <h1>(Tucson according to Alex)</h1>
     <h2>Incorporated 1877 &bull; Population 542,629</h2>
 
@@ -140,6 +145,7 @@
           <li><a href="javascript:show('cowboys')">Cowboys</a></li>
           <li><a href="javascript:show('desert-museum')">Critters</a></li>
           <!-- <li><a href="javascript:show('airplane-boneyard')">Dead Planes</a></li> -->
+          <li><a href="javascript:show('flowers')">Flowers</a></li>
           <li><a href="javascript:show('gem-show')">Gems</a></li>
           <li><a href="javascript:show('guns')">Guns</a></li>
           <li><a href="javascript:show('horses')">Horses</a></li>
@@ -156,7 +162,12 @@
           <li><a href="javascript:show('valley-of-the-moon')">Valley of the Moon</a></li>
         </ul>
       </div>
+
       <div id="content">
+        <div id="start" style="display: block;">
+          <img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/clients/tucson-redesign/gvargas_rainbow_and_saguaro_7ce63f55-4cc3-491c-be0f-98d242f69bfa.jpg">
+        </div>
+
         <div id="caves">
           <h3>Caves</h3>
           <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/0f/0b/0e/kartchner-caverns-in.jpg?w=1200&h=1200&s=1">
@@ -181,7 +192,7 @@
           <p>
             A real Wild West mining boom town, memorialized as the site of the
             "Shootout at the O.K. Corral".  Now exists as a Disneyfied but still
-            fairly amusing characature of itself.
+            fairly amusing charicature of itself.
           </p>
           <p class="alex-says">
             It's fun if you are open to some cheesiness.
@@ -197,7 +208,7 @@
           <p>
             <a href="https://en.wikipedia.org/wiki/Bisbee,_Arizona">Bisbee</a>
             (about 2 hours away) is a real mining town nestled among steep
-            hills; feels a bit like a wilder mini-San Fran.  Saloons, magic
+            hills; feels a bit like a Wild West mini-San Fran.  Saloons, magic
             shows, and of course gift shops.  Huge open-pit mines, some in use
             until the late 20th century, and mine shaft tours.
           </p>
@@ -208,8 +219,7 @@
             ever seen a dump truck that is three stories tall?
           </p>
           <p class="alex-says">
-            Bisbee is definitely cute, like a mini San Francisco, and more real
-            than Tombstone.
+            Bisbee is definitely cute and less fake than Tombstone.
           </p>
         </div>
 
@@ -218,7 +228,7 @@
           Museum</a></h3>
           <p>
             Great museum / zoo / botanical garden in the middle of the Saguaro
-            National Forest.  Cacti, of course, plus all sorts of critters: big
+            National Park.  Cacti, of course, plus all sorts of critters: big
             cats, birds of prey, snakes, tarantulas, scorpions, desert
             tortoises, javelinas, and all sorts of others.
           </p>
@@ -248,16 +258,20 @@
             And the placards all around glorify the U.S. military.  Still,
             planes are cool.
           </p>
+          <p>
+            There is also the famous Airplane Boneyard next to the AFB, but it
+            is unfortunately closed to the public since COVID.
+          </p>
         </div>
 
         <div id="titan-missle-museum">
           <h3><a href="https://titanmissilemuseum.org/">Titan Missle Museum</a></h3>
           <p>
-            A former Titan missle silo, now a museum to the Cold War.
+            A former Titan missile silo, now a museum to the Cold War.
           </p>
           <img src="https://www.oneman-onemap.com/wp-content/uploads/2020/07/20191118_105924_DSC9972.tif.wm-4.jpg">
           <p>
-            There are also several other sealed-up Titan missle sites scattered
+            There are also several other sealed-up Titan missile sites scattered
             around the area.
           </p>
           <p class="alex-says">
@@ -279,7 +293,8 @@
         <div id="kitt-peak">
           <img src="https://i1.wp.com/spacetourismguide.com/wp-content/uploads/2018/09/Stargazing-in-Tucson-Saguaro-National-Park-Bob-Wick-for-BLM-via-Flickr.jpg?w=862&ssl=1">
           <p>
-            The clear air and isolated peaks make the Sonoran Desert great for astronomy and stargazing.
+            The clear air and isolated peaks make the Sonoran Desert great for
+            astronomy and stargazing.
           </p>
           <h3><a href="https://kpno.noirlab.edu/">Kitt Peak National Observatory</a></h3>
           <img src="https://www.astronomy.com/wp-content/uploads/sites/2/2023/02/ASYKP0815_01.jpg?resize=600%2C306">
@@ -324,20 +339,35 @@
           <img src="https://azdot.gov/sites/default/files/Screen%20Shot%202020-06-23%20at%202.22.14%20PM.png">
         </div>
 
+        <div id="flowers">
+          <h3>Flowers</h3>
+          <p>
+            Yes, plants bloom in the desert!  Saguaros bloom too!
+          </p>
+          <img src="https://media.sciencephoto.com/c0/42/55/76/c0425576-800px-wm.jpg">
+          <p>
+            Spring comes early: late February and March.
+          </p>
+          <p>
+            See
+            the <a href="https://www.desertusa.com/wildflo/tucson.html">DesertUSA
+            Wildflowers Page for Arizona</a>.
+          </p>
+        </div>
+
         <div id="gem-show">
           <h3><a href="https://www.tgms.org/show">Tucson Gem Show</a></h3>
           <p>
             Every year, end of January and beginning of February.  A hobby and
             trade convention that leaks out to take over much of the town.
-            Described to me by a local as "Like Burning Man with rocks."
           </p>
           <img src="https://loveandlightschool.com/wp-content/uploads/2023/01/BLOG-POST-FEATURED-IMAGE-1.png">
           <p>
             Even outside of the Gem Show time of year, rock shops abound in Tucson.
           </p>
           <p class="alex-says">
-            Haven't been yet!  People say that town is sort of overrun during Gem
-            Show.
+            Haven't been yet!  People say that town is sort of overrun during
+            Gem Show.  A local described it as, "like Burning Man with rocks."
           </p>
         </div>
 
@@ -414,8 +444,9 @@
             <li>
               The <b>Catalina Mountains</b> in the Coronado National Forest form
               the northern border of Tucson.  Many demanding trails lead up
-              shaded canyons eventually to the forested peaks.  The <b>Sabino
-              Canyon</b> area is the city's most populated and best-developed
+              shaded canyons eventually to the forested peaks.
+              The <b><a href="https://www.fs.usda.gov/recarea/coronado/recarea/?recid=75425">Sabino
+              Canyon</a></b> area is the city's most popular and best-developed
               hiking spot.
             </li>
             <li>
@@ -432,7 +463,7 @@
               <b><a href="https://ironwoodforest.org/">Ironwood National
               Monument</a></b> is a vast stretch of flat desert and bluffs, an
               hour to the northwest.  It's lightly developed and great for
-              backcountry hiking.
+              back country hiking.
             </li>
           </ul>
 
@@ -446,6 +477,10 @@
             The desert is bigger than it looks, and there are infinitely many places to explore, even nearby.
             It can also be amazingly lush, and even blooms in the spring.
           </p>
+
+          <p>
+            Camping, trail running, mountain biking, and climbing are all popular.
+          </p>
         </div>
 
         <div id="forest">
@@ -455,18 +490,19 @@
             driving north, except much faster.  Arizona is known
             for <a href="https://en.wikipedia.org/wiki/Sky_island">sky
             islands</a>, biomes isolated in high-altitude mountaintop regions.
-            The peaks are snowcapped in the winter.
+            The peaks are snow-capped in the winter.
           </p>
           <ul>
             <li>
               <b>Mount Lemmon</b> is Tucson's summer getaway, a beautiful drive
               into Catalina Mountains north of the city.  Along the way, a
-              former Japanese internment camp, now a park.
+              former Japanese interment camp, now a park.
             </li>
             <li>
               The <b>Santa Rita Mountains</b> are an hour south of Tucson.
-              Madera Canyon and Mount Wrightson are particularly beloved,
-              especially when Tucson is crazy hot.
+              <a href="https://friendsofmaderacanyon.org/">Madera Canyon</a>
+              (also great for birdwatching) and Mount Wrightson are particularly
+              beloved, especially when Tucson is crazy hot.
             </li>
           </ul>
           <img src="https://i0.wp.com/roaminghills.com/wp-content/uploads/2018/07/P7071772.jpg?resize=1170%2C658&ssl=1">
@@ -495,7 +531,7 @@
         </div>
 
         <div id="quirky">
-          <h3>other <a href="https://maps.roadtrippers.com/trips/26992307">quirky stuff</a></h3>
+          <h3>Other <a href="https://maps.roadtrippers.com/trips/26992307">quirky stuff</a></h3>
           <p>
             Tucson thinks of itself as weird.
           </p>
